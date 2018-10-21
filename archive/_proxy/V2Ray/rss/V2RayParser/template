@@ -1,0 +1,67 @@
+{
+  "inbound": {
+    "listen": "127.0.0.1",
+    "port": 8286,
+    "protocol": "socks",
+    "settings": {
+      "udp": true
+    }
+  },
+  "outbound": {
+    "mux": {
+      "enabled": true
+    },
+    "protocol": "vmess",
+    "settings": {
+      "vnext": [
+        {
+          "address": null,
+          "port": null,
+          "users": [
+            {
+              "alterId": 64,
+              "id": null
+            }
+          ]
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": null,
+      "security": "none",
+      "wsSettings": {
+        "path": null
+      }
+    }
+  },
+  "outboundDetour": [
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    }
+  ],
+  "routing": {
+    "settings": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "domain": [
+            "geosite:cn"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "geoip:cn",
+            "geoip:private"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        }
+      ]
+    },
+    "strategy": "rules"
+  }
+}
