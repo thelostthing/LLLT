@@ -1,0 +1,114 @@
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne/edit.html") {
+button {
+    padding: .25rem .5rem;
+    line-height: 1.5;
+    border: 1px solid transparent!important;
+    border-radius: .2rem;
+    cursor: pointer;
+
+    font-size: .8rem;
+    color: #212529;
+    background-color: #f8f9fa;
+    background-image: none!important;
+}
+button:hover {
+    border-color: #dae0e5!important;
+    color: #212529;
+    background-color: #e2e6ea;
+}
+button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, .5);
+}
+
+input:not([type='checkbox']), select {
+    height: calc(1.8125rem + 2px);
+    padding: .25rem .5rem;
+    border: 1px solid #ced4da;
+    border-radius: .2rem;
+    line-height: 1.5;
+    font-size: .8rem;
+
+    color: #495057;
+    background-color: #fff;
+}
+input:not([type='checkbox']):focus, select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    border-color: #80bdff;
+    background-color: #fff;
+}
+select {
+    padding-right: 2rem;
+    appearance: none;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+}
+.svg-icon.select-arrow {
+    display: none;
+}
+
+input[type='checkbox'] {
+    opacity: 0!important;
+}
+.svg-icon.checked {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+.svg-icon.info {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+#header {
+    border-right: none;
+    box-shadow: none;
+}
+.code-label {
+    display: block;
+    padding-left: 0;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.CodeMirror-vscrollbar {
+    outline: none;
+}
+.resize-grip {
+    cursor: ns-resize;
+    border-top-style: none;
+}
+.resize-grip::after {
+    border-top-style: none;
+}
+.applies-to > label {
+    height: calc(1.8125rem + 2px);
+    font-size: 1rem;
+}
+.applies-value-wrapper > a {
+    height: calc(1.8125rem + 2px);
+}
+#help-popup {
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+#help-popup > .title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6662;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6665;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  background: #6661;
+  border-radius: 20px;
+}
+}
