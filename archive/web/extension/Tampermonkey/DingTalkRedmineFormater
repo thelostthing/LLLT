@@ -1,0 +1,31 @@
+// ==UserScript==
+// @name         DingTalk Redmine Formater
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Formater for im.dingtalk's redmine messages, just double click message bubble and done! Test@Ubuntu16.04~Chrome71~Tampermonkey4.7
+// @author       thelostthing
+// @match        https://im.dingtalk.com/
+// @grant        none
+// @license      MIT
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    document.addEventListener('dblclick', function(event) {
+        var container_msg = event.target.closest('.msg-bubble');
+
+        if(container_msg && !container_msg.classList.contains('DingTalkRedmineFormater')) {
+            var list_to_convert = container_msg.querySelectorAll('.markdown-content > p');
+            var converter = document.createElement('textarea');
+
+            for(var i = 0, len = list_to_convert.length; i < len; i ++) {
+                converter.innerHTML = list_to_convert[i].innerHTML;
+                list_to_convert[i].innerHTML = converter.value;
+            }
+
+            container_msg.classList.add('DingTalkRedmineFormater');
+        }
+    });
+
+})();
