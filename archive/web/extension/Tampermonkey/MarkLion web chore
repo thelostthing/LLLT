@@ -1,0 +1,37 @@
+// ==UserScript==
+// @name        MarkLion web chore
+// @namespace   Violentmonkey Scripts
+// @match       http://127.0.0.1:*/*
+// @match       http://localhost:*/*
+// @grant       none
+// @version     1.0
+// @author      -
+// ==/UserScript==
+
+const SHORTCUTS = [
+  {key: ['t', ' '], callback: () => {
+    if(document.querySelector('.rightside.on .node-properties') || document.querySelector('.node-properties.on')) {
+      let copyAnchors = document.querySelectorAll('a.copy');
+      if(copyAnchors.length) {
+        copyAnchors.forEach(anchor => {
+          if(anchor.previousSibling?.textContent?.trim() == '文本内容') {
+            anchor.click();
+          }
+        })
+      }
+    }
+  }},
+]
+const enhance = () => {
+  if(document.title?.includes('marklion')) {
+    SHORTCUTS.forEach(({key, callback}) => {
+      document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        if(key.indexOf(keyName.toLowerCase()) > -1 && typeof callback == 'function') {
+          callback();
+        }
+      });
+    });
+  }
+};
+window.addEventListener('load', enhance);
