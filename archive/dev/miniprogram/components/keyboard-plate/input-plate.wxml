@@ -4,5 +4,5 @@
   <view class="inputPlateClear clear-class" bind:tap="onClear">清除</view>
   <view wx:for="{{7}}" wx:key="index" class="inputPlateChar {{plateIndex == index ? 'active' : ''}}" >{{plateArray[index]}}</view>
   <view wx:if="{{isEV}}" class="inputPlateChar {{plateIndex == 7 ? 'active' : ''}}">{{plateArray[7]}}</view>
-  <view wx:if="{{!isEV}}" class="inputPlateEVPlaceHolder" bind:tap="enableEV"><image src="https://static.tchcn.com/image/ic/wx2/sqtxqx_car_xny@3x.png" />新能源</view>
+  <view wx:if="{{!isEV}}" class="inputPlateEVPlaceHolder" bind:tap="enableEV"><image src="add.png" />新能源</view>
 </view>
