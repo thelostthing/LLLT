@@ -1,0 +1,58 @@
+/* components/keyboard-plate/index.wxss */
+.placeHolder {
+  flex-shrink: 0;
+  height: calc(600rpx + env(safe-area-inset-bottom));
+}
+.plate-number-container {
+	position: fixed;
+	bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(600rpx + env(safe-area-inset-bottom));
+  padding-top: 76rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+	background-color: rgba(239, 239, 239, 1);
+	transform: translateY(150%);
+  transition: all 0.4s ease;
+	z-index: 9999;
+}
+.show .plate-number-container {
+	transform: translateY(0);
+}
+.keyboard-panel {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12rpx;
+  margin-bottom: 14rpx;
+}
+
+.keyboard-panel .key {
+  width: 60rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(51, 51, 51, 1);
+  background: white;
+  border-radius: 9rpx;
+  box-shadow: 0rpx 2rpx 0rpx rgba(7, 42, 41, 0.16);
+}
+.keyboard-panel .key.matched,
+.keyboard-panel .key.active {
+  color: white;
+  background: rgba(47, 47, 49, 1);
+}
+.keyboard-panel .key-delete {
+  width: 132rpx;
+  height: 88rpx;
+  border-radius: 9rpx;
+  background: url('https://static.tchcn.com/image/ic/wx2/sqtxqx_car_key_delete@3x.png') no-repeat center / 54rpx 35rpx, white;
+  box-shadow: 0rpx 2rpx 0rpx rgba(7, 42, 41, 0.16);
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+.keyboard-panel .key-delete.active {
+  box-shadow: inset 0rpx 2rpx 0rpx rgba(7, 42, 41, 0.16);
+  transform: translateY(1rpx);
+}

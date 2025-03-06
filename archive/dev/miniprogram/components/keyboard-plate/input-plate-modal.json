@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "custom-icon": "/components/custom-icon/index",
+    "input-plate": "/components/keyboard-plate/input-plate",
+    "keyboard-plate": "/components/keyboard-plate/index",
+    "van-overlay": "@vant/weapp/overlay/index"
+  }
+}

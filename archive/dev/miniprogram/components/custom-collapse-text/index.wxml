@@ -1,0 +1,4 @@
+<!--components/custom-collapse-text/index.wxml-->
+<view class="CollapseTextContainer {{collapsed ? 'collapsed' : 'uncollapsed'}}" style="--textColor: {{textColor}}; --collapseColor: {{collapseColor}}; --collapseLine: {{collapseLine}}; --lineHeight: {{lineHeight}}; --textSize: {{textSize}}; --collapseSize: {{collapseSize}}; --coverColor: {{coverColor}}">
+  <view class="CollapseText"><view class="CollapseTrigger" catch:tap="setCollapsed">{{textOpen}}</view>{{text}}</view>
+</view>

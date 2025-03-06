@@ -1,0 +1,10 @@
+<!--components/highlight/index.wxml-->
+<!-- 由于 <text> 标签的特性， >{{item.text}}</text> 标签处不应该有换行-->
+<!-- prettier-ignore -->
+<text
+  wx:for="{{segments}}"
+  wx:key="index"
+  class="{{item.highlight ? 'highlight-class' : 'general-class'}}"
+  style="color:{{item.highlight ? highlightColor : 'inherit'}};"
+  data-index="{{index}}"
+  bind:tap="onTapSegment">{{item.text}}</text>

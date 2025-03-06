@@ -1,0 +1,13 @@
+<!--components/custom-pop-menu/index.wxml-->
+<van-popup 
+  show="{{ true }}" 
+  bind:close="hide" 
+  overlay="{{showCustomPopMenu}}" 
+  class="customPopMenuContainer" 
+  custom-class="customPopMenu" 
+  custom-style="{{customPopMenuStyle}}"
+>
+  <view class="customPopMenuContent">
+    <slot />
+  </view>
+</van-popup>

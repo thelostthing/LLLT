@@ -1,0 +1,16 @@
+/* components/custom-pop-menu/index.wxss */
+.customPopMenuContainer {
+  --overlay-background-color: transparent;
+}
+.customPopMenu.van-popup--center {
+  --popup-background-color: transparent;
+  overflow: visible;
+  left: 0rpx;
+  top: 0rpx;
+  transform: translate3d(-100vw, -100vw, 0);
+}
+.customPopMenuContent {
+  background-color: white;
+  border-radius: 24rpx;
+  box-shadow: 0rpx 6rpx 12rpx grey;
+}

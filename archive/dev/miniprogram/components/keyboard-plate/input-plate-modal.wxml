@@ -1,0 +1,15 @@
+<!--components/keyboard-plate/input-plate-modal.wxml-->
+<van-toast id="van-toast" />
+<van-overlay custom-class="plateInputOverlay" show="{{ show }}" z-index="10">
+  <view class="plateInputContainer">
+    <image class="plateInputSign" mode="widthFix" src="https://static.tchcn.com/image/ic/wx2/sqtxqx_car_add.png" />
+    <view class="plateInfo">
+      <input-plate class="inputPlate" plateIndex="{{currentPlateIndex}}" plate="{{currentPlate}}" platelength="{{currentPlateMaxLength}}" bind:ev="onPlateEV" bind:clear="onPlateClear"/>
+      <view class="inputPlateOk commonCustomButton buttonPrimary" bind:tap="onOkPlate">确定</view>
+    </view>
+  </view>
+  <view class="inputPlateCancel">
+    <custom-icon bind:tap="onCancelPlate" type="close-circle" size="70"/>
+  </view>
+  <keyboard-plate placeholder show="{{true}}" plateIndex="{{currentPlateIndex}}" plateChar="{{currentPlate[currentPlateIndex]}}" bind:input="onPlateInput" bind:delete="onPlateDelete"/>
+</van-overlay>

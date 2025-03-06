@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-html": "mp-html"
+  },
+  "styleIsolation": "apply-shared"
+}

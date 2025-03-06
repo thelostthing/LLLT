@@ -1,0 +1,64 @@
+/* components/custom-collapse-text/index.wxss */
+.CollapseTextContainer {
+  display: flex;
+  overflow: hidden;
+  font-size: var(--textSize);
+}
+.CollapseTextContainer .CollapseText {
+  color: var(--textColor);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  white-space: pre-wrap;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; */
+  position: relative;
+  line-height: var(--lineHeight);
+  max-height: calc(var(--lineHeight) * var(--collapseLine));
+  transition: .3s max-height;
+}
+.CollapseTextContainer .CollapseText::before {
+  content: '';
+  float: right;
+  height: calc(100% - var(--lineHeight));
+}
+.CollapseTextContainer .CollapseText::after {
+  content: '';
+  width: 999vw;
+  height: 999vw;
+  position: absolute;
+  box-shadow: inset calc(100px - 999vw) calc(30px - 999vw) 0 0 var(--coverColor);
+  margin-left: -100px;
+}
+.CollapseTextContainer .CollapseText .CollapseTrigger {
+  float: right;
+  clear: both;
+  color: var(--collapseColor);
+  cursor: pointer;
+  margin-left: 20px;
+  position: relative;
+}
+.CollapseTextContainer .CollapseText .CollapseTrigger::before{
+  content: '...';
+  color: var(--textColor);
+  position: absolute;
+  left: -5px;
+  transform: translateX(-100%);
+}
+
+
+.CollapseTextContainer.collapsed {
+    
+}
+.CollapseTextContainer.uncollapsed {
+  
+}
+.CollapseTextContainer.uncollapsed .CollapseText {
+  /* display: block; */
+  max-height: none;
+  
+}
+.CollapseTextContainer.uncollapsed .CollapseText .CollapseTrigger {
+  display: none;
+}

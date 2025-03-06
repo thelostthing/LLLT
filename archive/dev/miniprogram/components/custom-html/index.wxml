@@ -1,0 +1,2 @@
+<!--components/custom-html/index.wxml-->
+<mp-html class="fr-view" content="{{content}}" />

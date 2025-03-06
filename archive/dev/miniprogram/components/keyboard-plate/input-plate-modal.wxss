@@ -1,0 +1,39 @@
+/* components/keyboard-plate/input-plate-modal.wxss */
+.plateInputOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.plateInputContainer {
+  margin-top: auto;
+  flex-shrink: 0;
+  /* flex-grow: 1; */
+  width: 690rpx;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 32rpx;
+}
+.plateInputContainer .plateInputSign {
+  width: 100%;
+}
+.plateInputContainer .plateInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plateInputContainer .plateInfo .inputPlate {
+  margin-top: 67rpx;
+}
+.plateInputContainer .plateInfo .inputPlateOk {
+  width: 624rpx;
+  height: 98rpx; 
+  border-radius: 49rpx;
+  margin-top: 66rpx;
+  margin-bottom: 50rpx;
+}
+.inputPlateCancel {
+  flex-shrink: 0;
+  margin: 32rpx auto 32rpx auto;
+}
