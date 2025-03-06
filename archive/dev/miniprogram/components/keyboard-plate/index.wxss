@@ -48,7 +48,7 @@
   width: 132rpx;
   height: 88rpx;
   border-radius: 9rpx;
-  background: url('https://static.tchcn.com/image/ic/wx2/sqtxqx_car_key_delete@3x.png') no-repeat center / 54rpx 35rpx, white;
+  background: url('del.png') no-repeat center / 54rpx 35rpx, white;
   box-shadow: 0rpx 2rpx 0rpx rgba(7, 42, 41, 0.16);
   transition: box-shadow 0.2s ease, transform 0.1s ease;
 }
