@@ -2,7 +2,7 @@
 <van-toast id="van-toast" />
 <van-overlay custom-class="plateInputOverlay" show="{{ show }}" z-index="10">
   <view class="plateInputContainer">
-    <image class="plateInputSign" mode="widthFix" src="https://static.tchcn.com/image/ic/wx2/sqtxqx_car_add.png" />
+    <image class="plateInputSign" mode="widthFix" src="add.png" />
     <view class="plateInfo">
       <input-plate class="inputPlate" plateIndex="{{currentPlateIndex}}" plate="{{currentPlate}}" platelength="{{currentPlateMaxLength}}" bind:ev="onPlateEV" bind:clear="onPlateClear"/>
       <view class="inputPlateOk commonCustomButton buttonPrimary" bind:tap="onOkPlate">确定</view>
